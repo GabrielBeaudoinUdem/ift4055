@@ -3,86 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet : L'humour dans les modèles de langage</title>
+    <title>IFT4055 - Évaluation des LLM pour l'humour</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f8f9fa;
+            color: #343a40;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+        header, section {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        section {
-            margin-bottom: 20px;
+        h1 {
+             text-align: center;
+             color: #0056b3;
+             margin-bottom: 5px;
+         }
+        h2 { 
+            color: #0056b3;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 5px;
+            margin-top: 0;
+            font-size: 1.5em;
         }
+        h3 {
+            color: #17a2b8;
+            font-size: 1.3em;
+        }
+        h4 { 
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+        p, ul, ol {
+            margin-bottom: 1em;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        .author-affiliation {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        .report-info {
+             text-align: center;
+             margin-bottom: 20px;
+             font-style: italic;
+             color: #6c757d;
+        }
+        .lang {
+            font-weight: bold;
+            color: #17a2b8;
+            margin-bottom: 5px;
+            display: block;
+        }
+        blockquote {
+            border-left: 4px solid #e9ecef;
+            padding-left: 15px;
+            margin-left: 0;
+            font-style: italic;
+            color: #495057;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1em;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px 12px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        th {
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+        caption {
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #6c757d;
+            padding-top: 5px;
+        }
+        .figure-placeholder {
+            text-align: center;
+            font-style: italic;
+            color: #6c757d;
+            border: 1px dashed #ced4da;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .reference-list li {
+            font-size: 0.9em;
+            margin-bottom: 0.8em;
+            word-break: break-word;
+        }
+        .reference-list a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .reference-list a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 25px 0;
+            border: 0;
+            border-top: 1px solid #dee2e6;
+        }
+        .title-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        a {
+            color: #6c757d;
+        }
+        .author-affiliation a {
+            text-decoration: none; /
+            color: inherit;
+        }
+        .author-affiliation a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Projet : L'humour dans les modèles de langage</h1>
+        <h1>
+        <a href="https://diro.umontreal.ca/programmes-cours/cours-horaires/cours-ift3150-et-ift4055/" class="title-link">
+                IFT4055 - Projet Honor
+            </a></h1>
+        <p class="author-affiliation">
+        <a href="https://github.com/GabrielBeaudoinUdem">Gabriel Beaudoin</a><br>
+        Université de Montréal, Montréal, Canada<br>
+        Supervisé par: <a href="https://github.com/bbaudry">Benoît Baudry</a>
+    </p>
     </header>
 
     <main>
         <section id="section-a">
-            <h2>A. Énoncé du projet</h2>
-            <p>
-                Explorer le monde de l'humour et de l'informatique puis essayer de créer un programme qui génère des pages 404 humoristique pour un site web.
-            </p>
-        </section>
+    <h2>A. Énoncé du projet / Project Statement</h2>
+    
+    <div>
+        <span class="lang">Énoncé du projet (Français)</span>
+        <p>
+            Ce projet vise à évaluer le potentiel et les limites actuelles des grands modèles de langage (LLM) dans le domaine spécifique de la génération d'humour. L'objectif principal est de déterminer si les modèles récents peuvent produire de l'humour de manière efficace et pertinente en langue française. Pour ce faire, le projet compare les performances de différents LLM (Mistral Large 2, GPT-4o, DeepSeek-R1, Gemini 2.0 Flash, Llama 3 70B, Grok 3, et Claude 3.5 Haiku) sur diverses tâches humoristiques, allant de la blague simple (one-liner) à des constructions plus élaborées comme les sketchs ou les pages 404 contextuelles. L'étude examine également l'influence de techniques de prompting comme le raisonnement en chaîne ou le role-prompting et explore la capacité des LLM à évaluer eux-mêmes la qualité humoristique, en utilisant l'évaluation humaine comme référence.
+        </p>
+    </div>
+    
+    <hr style="margin: 20px 0; border-color: #e9ecef;">
 
-        <section id="section-b">
-            <h2>B. Description détaillée</h2>
-            <h3>Spécification fonctionnelle :</h3>
-            <ul>
-                <li>Étudier l’humour dans l'informatique.</li>
-                <li>Élaborer une métrique pour évaluer l'humour produit par un LLM.</li>
-                <li>Analyser les performances actuelles des LLM pour la génération de contenu humoristique.</li>
-                <li>Implémenter des ajustements sur un modèle open source pour tester diverses approches d’optimisation de l’humour : fine-tuning, prompt engineering ou alignement. Comparer les résultats avec la métrique définie.</li>
-            </ul>
-            <h3>Environnement et contraintes techniques :</h3>
-            <ul>
-                <li><strong>Environnement de développement :</strong> Python, frameworks comme PyTorch avec des bibliothèques comme Hugging Face Transformers.</li>
-                <li><strong>Modèle :</strong> Utilisation d’un modèle open source (probablement Llama).</li>
-                <li><strong>Données :</strong> Création ou nettoyage d’un dataset humoristique.</li>
-            </ul>
-        </section>
+    <div>
+        <span class="lang">Project Statement (English)</span>
+        <p>
+            This project aims to assess the potential and current limitations of large language models (LLMs) in the specific field of humor generation. The main objective is to determine whether recent models can produce humor effectively and relevantly in the French language. To do so, the project compares the performance of different LLMs (Mistral Large 2, GPT-4o, DeepSeek-R1, Gemini 2.0 Flash, Llama 3 70B, Grok 3, and Claude 3.5 Haiku) on various humorous tasks, from simple one-liners to more elaborate constructions like sketches or contextual 404 pages. The study also examines the influence of prompting techniques such as Chain of Thought reasoning or role prompting and explores the models' ability to self-evaluate the quality of humor, using human evaluation as a benchmark.
+        </p>
+    </div>
+</section>
+
+
+       <section id="section-b">
+    <h2>B. Description détaillée / Detailed Description</h2>
+    
+    <div>
+        <span class="lang">Description détaillée (Français)</span>
+
+        <h3>Titre du projet :</h3>
+        <p>Évaluation du potentiel des Grands Modèles de Langage pour le domaine de l'humour</p>
+
+        <h3>Spécification fonctionnelle :</h3>
+        <ul>
+            <li>Étudier l’état de l'art de l'humour généré par l'IA.</li>
+            <li>Concevoir et implémenter une méthodologie pour évaluer l'humour produit par différents LLM sur diverses tâches (one-liners, sketchs, pages 404).</li>
+            <li>Analyser qualitativement les performances des LLM récents.</li>
+            <li>Étudier l'impact de techniques comme le raisonnement en chaîne et le role-prompting.</li>
+            <li>Évaluer la capacité des LLM à juger eux-mêmes la qualité de l'humour.</li>
+        </ul>
+
+        <h3>Environnement et contraintes techniques :</h3>
+        <ul>
+            <li><strong>Langage/Outils :</strong> Python, Pytorch, LLMs, Hugging Face Transformers.</li>
+            <li><strong>Modèles visés :</strong> GPT-4o, Claude 3.5, Gemini, Mistral Large, Llama 3, etc.</li>
+            <li><strong>Données :</strong> Corpus de blagues généré par les LLM, données des réponses des participants ayant évalué les modèles.</li>
+            <li><strong>Contrainte principale :</strong> Temps limité (~150h), avoir des évaluateurs humains, serveur et accès au modèle.</li>
+        </ul>
+
+        <h3>Architecture logicielle / Modules principaux :</h3>
+        <ul>
+            <li>Plateforme d'évaluation : développement d'un site web de sondage pour collecter les évaluations humaines, utilisant HTML, CSS, JavaScript avec Supabase comme backend.</li>
+            <li>Script d'analyse : traitement des résultats des évaluations humaines et automatiques, avec Python et PostgreSQL.</li>
+        </ul>
+    </div>
+
+    <hr style="margin: 20px 0; border-color: #e9ecef;">
+
+    <div>
+        <span class="lang">Detailed Description (English)</span>
+
+        <h3>Project Title:</h3>
+        <p>Evaluation of the Potential of Large Language Models for the Humor Domain</p>
+
+        <h3>Functional Specification:</h3>
+        <ul>
+            <li>Study the state of the art of AI-generated humor.</li>
+            <li>Design and implement a methodology to evaluate humor generated by different LLMs on various tasks (one-liners, sketches, 404 pages).</li>
+            <li>Qualitatively analyze the performance of recent LLMs.</li>
+            <li>Study the impact of techniques such as Chain of Thought and role prompting.</li>
+            <li>Evaluate the ability of LLMs to self-assess the quality of humor.</li>
+        </ul>
+
+        <h3>Environment and Technical Constraints:</h3>
+        <ul>
+            <li><strong>Language/Tools:</strong> Python, Pytorch, LLMs, Hugging Face Transformers.</li>
+            <li><strong>Target Models:</strong> GPT-4o, Claude 3.5, Gemini, Mistral Large, Llama 3, etc.</li>
+            <li><strong>Data:</strong> Joke corpus generated by the LLMs, human evaluators' responses.</li>
+            <li><strong>Main constraint:</strong> Limited time (~150 hours), need human evaluators, server and model access.</li>
+        </ul>
+
+        <h3>Software Architecture / Main Modules:</h3>
+        <ul>
+            <li>Evaluation platform: developing a survey website to collect human evaluations, using HTML, CSS, JavaScript with Supabase as backend.</li>
+            <li>Analysis scripts: processing human and model evaluation results, using Python and PostgreSQL.</li>
+        </ul>
+    </div>
+</section>
+
 
         <section id="section-c">
-            <h2>C. Plan de développement</h2>
-            <p><strong>Durée totale :</strong> ~150 heures</p>
-            <p><strong>Date de début :</strong> ~20 janvier</p>
-            <p><strong>Date de fin :</strong> ~25 avril</p>
-            <p>Avec le prof on va voir durant le projet donc se référer au rapports d'avancement.</p>
-        </section>
-        <section id="section-d">
-            <h2>D. Rapports d’avancement</h2>
+    <h2>C. Plan de développement / Development Plan</h2>
+
+    <div>
+        <span class="lang">Plan de développement (Français)</span>
+        <p><strong>Durée totale estimée :</strong> ~150 heures</p>
+        <p><strong>Date de début :</strong> ~20 Janvier 2025</p>
+        <p><strong>Date de fin :</strong> ~25 Avril 2025</p>
+
+        <h3>Phases prévues :</h3>
+        <p>Déterminer avec mon professeur durant le projet (voir la section <a href="#section-d">Rapports d’avancement</a>).</p>
+    </div>
+
+    <hr style="margin: 20px 0; border-color: #e9ecef;">
+
+    <div>
+        <span class="lang">Development Plan (English)</span>
+        <p><strong>Estimated total duration:</strong> ~150 hours</p>
+        <p><strong>Start date:</strong> ~January 20, 2025</p>
+        <p><strong>End date:</strong> ~April 25, 2025</p>
+
+        <h3>Planned Phases:</h3>
+        <p>Determined with my professor during the project (see section <a href="#section-d">Progress Reports</a>).</p>
+    </div>
+</section>
+
+
+    <section id="section-d">
+    <h2>D. Rapports d’avancement / Progress Reports</h2>
+
+    <div>
+        <span class="lang">Rapports d’avancement (Français)</span>
         <ol>
-            <strong>Semaine 1-2</strong>
-                <p>Inscription au cours</p>
-                <p>lecture de papier</p>
-            <strong>Semaine 3-4</strong>
-                <p>Expérimenter la création de page 404 avec un model en utilisant du prompt engineering. Comparer les models et les techniques.<p>    
-                <p>lecture de papier</p>
-            <strong>Semaine 5-6</strong>
-                <p>Demander à des personnes d'évaluer les réponse des différents models sur les différentes tâche. Composer un rapport sur les expérimentations.</p>
-                <p>lecture de papier</p>
-            <strong>Semaine 7-8</strong>
-                <p>S'informer sur le fonctionnement des LLMs et rechercher sur les modèles non censurés et sur comment fine-tuner un LLM ou l'aligner.</p>
-                <p>lecture de papier</p>
-            <strong>Semaine 9-10</strong>
-                <p>Créer un site web pour mener une expérimentation a plus grande échelle, générer un coprus de blague avec les 3 LLMs, les plus performant pour l'humour (Gpt-4o, deepseek-R1, gimini flash 2)</p>
-                <p>lecture de papier</p>
-            <strong>Semaine 11-12</strong>
-                <p>Récolter les données de la grande étude et analyser les données.</p>
-                <p>lecture de papier</p>
-            <strong>Semaine 13-14</strong>
-                <p>Écriture du rapport final</p>
-                <p>Préparation de la présentation oral.</p>
+            <li><strong>Semaine 1-2 :</strong> Inscription au cours, lecture de papiers.</li>
+            <li><strong>Semaine 3-4 :</strong> Création de pages 404 avec prompting, comparaison des modèles, lecture de papiers.</li>
+            <li><strong>Semaine 5-6 :</strong> Évaluation humaine des réponses, rédaction d'un rapport d'expérimentations, lecture de papiers.</li>
+            <li><strong>Semaine 7-8 :</strong> Recherche sur les LLMs et leur fine-tuning/alignement, lecture de papiers.</li>
+            <li><strong>Semaine 9-10 :</strong> Développement d'un site pour une grande expérimentation, génération d'un corpus de blagues.</li>
+            <li><strong>Semaine 11-12 :</strong> Collecte et analyse de données.</li>
+            <li><strong>Semaine 13-14 :</strong> 
+                <ul>
+                    <li>Écriture du rapport final. <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_rapport_final.pdf" target="_blank">Voir le rapport</a>.</li>
+                    <li>Préparation de la présentation orale. <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_presentation_final.pdf" target="_blank">Voir les slides</a>.</li>
+                </ul>
+            </li>        </ol>
+    </div>
+
+    <hr style="margin: 20px 0; border-color: #e9ecef;">
+
+    <div>
+        <span class="lang">Progress Reports (English)</span>
+        <ol>
+            <li><strong>Weeks 1-2:</strong> Course enrollment, reading papers.</li>
+            <li><strong>Weeks 3-4:</strong> Creating 404 pages via prompting, comparing models and techniques, reading papers.</li>
+            <li><strong>Weeks 5-6:</strong> Human evaluation of responses, writing an experiment report, reading papers.</li>
+            <li><strong>Weeks 7-8:</strong> Research on LLMs, fine-tuning and alignment, reading papers.</li>
+            <li><strong>Weeks 9-10:</strong> Building a website for a large-scale study, generating a joke corpus.</li>
+            <li><strong>Weeks 11-12:</strong> Data collection and analysis.</li>
+            <li><strong>Weeks 13-14:</strong> 
+                <ul>
+                    <li>Writing the final report. <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_rapport_final.pdf" target="_blank">See the report</a>.</li>
+                    <li>Preparing the oral presentation. <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_presentation_final.pdf" target="_blank">See the slides</a>.</li>
+                </ul>
+            </li>        
         </ol>
-         </section>
+    </div>
+</section>
+
+
+        <hr>
+
+        <section id="section-e">
+            <h2>E. Résumé</h2>
+
+            <section id="abstract">
+                <h3>Abstract / Résumé</h3>
+                <div>
+                     <span class="lang">Résumé (Français)</span>
+                     <p>
+                        Les LLM peuvent-ils réellement générer de l'humour de manière efficace? Cet article explore cette question en évaluant plusieurs modèles récents sur des tâches de génération humoristique : Mistral Large 2, GPT-4o, DeepSeek-R1, Gemini 2.0 Flash, Grok 3, Claude 3.5 et Llama 3 70B. Nous analysons également l'impact du raisonnement en chaîne (Chain of Thought) sur la qualité de l'humour produit. Ensuite, nous nous demanderons si les modèles de langage fondamentaux sont des outils pertinents pour évaluer la qualité des blagues. Enfin, nous proposerons des pistes de recherche futures ainsi qu'un compte rendu des performances des modèles fondamentaux dans le domaine de l'humour.
+                     </p>
+                    <p>Pour plus de détails, consultez le <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_rapport_final.pdf">rapport complet</a>.</p>
+                </div>
+                 <hr style="margin: 20px 0; border-color: #e9ecef;">
+                <div>
+                    <span class="lang">Abstract (English)</span>
+                    <p>
+                        Can LLMs truly generate humor effectively? This article explores this question by evaluating several recent models on humorous generation tasks: Mistral Large 2, GPT-4o, DeepSeek-R1, Gemini 2.0 Flash, Grok 3, Claude 3.5, and Llama 3 70B. We also analyze the impact of Chain of Thought reasoning on the quality of the produced humor. Subsequently, we question whether foundational language models are relevant tools for evaluating joke quality. Finally, we propose avenues for future research and provide an overview of the performance of foundational models in the domain of humor.
+                    </p>
+                    <p>For more details, see the <a href="https://github.com/GabrielBeaudoinUdem/ift4055/blob/main/ift4055_rapport_final.pdf">full report</a>.</p>
+                </div>
+            </section>
+
+        </section>
+
     </main>
 </body>
 </html>
-
-    
